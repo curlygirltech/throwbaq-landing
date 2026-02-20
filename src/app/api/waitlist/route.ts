@@ -52,7 +52,12 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { email, zip, city, role } = body;
+    const { email, zip, city, role, company } = body;
+
+    // Honeypot check — bots fill this hidden field, real users don't
+    if (company) {
+      return NextResponse.json({ success: true });
+    }
 
     // Validate email
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

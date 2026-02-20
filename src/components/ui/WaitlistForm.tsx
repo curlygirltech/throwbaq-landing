@@ -17,6 +17,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
   const [city, setCity] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [company, setCompany] = useState("");
   const [submittedRoles, setSubmittedRoles] = useState<Role[]>([]);
 
   const otherRole: Role = role === "shopper" ? "runner" : "shopper";
@@ -46,6 +47,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           zip,
           city: variant === "full" ? city : "",
           role,
+          company,
         }),
       });
 
@@ -171,6 +173,18 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           </button>
         </div>
 
+        {/* Honeypot field — hidden from real users */}
+        <input
+          type="text"
+          name="company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-9999px" }}
+        />
+
         {/* Error message */}
         {errorMsg && (
           <p className="text-sm text-red-400">{errorMsg}</p>
@@ -239,6 +253,18 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           className="w-1/2 rounded-xl bg-chocolate/20 px-4 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
         />
       </div>
+
+      {/* Honeypot field — hidden from real users */}
+      <input
+        type="text"
+        name="company"
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px" }}
+      />
 
       {/* Error message */}
       {errorMsg && (

@@ -152,7 +152,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 rounded-xl bg-chocolate/20 px-4 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
+            className="flex-1 rounded-xl bg-chocolate/20 px-4 py-3 text-linen placeholder:text-chocolate/60 outline-none focus:ring-2 focus:ring-tangelo"
           />
           <div className="flex gap-2">
             <input
@@ -163,7 +163,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
               maxLength={5}
               inputMode="numeric"
               required
-              className="flex-1 sm:w-20 sm:flex-initial rounded-xl bg-chocolate/20 px-3 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
+              className="flex-1 sm:w-20 sm:flex-initial rounded-xl bg-chocolate/20 px-3 py-3 text-linen placeholder:text-chocolate/60 outline-none focus:ring-2 focus:ring-tangelo"
             />
             <button
               type="submit"

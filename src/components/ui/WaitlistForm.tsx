@@ -123,7 +123,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           <button
             type="button"
             onClick={() => setRole("shopper")}
-            className={`flex-1 rounded-full py-2 text-sm font-semibold transition-colors cursor-pointer ${
+            className={`flex-1 rounded-full py-2 text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
               role === "shopper"
                 ? "bg-tangelo text-white"
                 : "text-linen/70 hover:text-linen"
@@ -134,7 +134,7 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           <button
             type="button"
             onClick={() => setRole("runner")}
-            className={`flex-1 rounded-full py-2 text-sm font-semibold transition-colors cursor-pointer ${
+            className={`flex-1 rounded-full py-2 text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
               role === "runner"
                 ? "bg-tangelo text-white"
                 : "text-linen/70 hover:text-linen"
@@ -144,8 +144,8 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
           </button>
         </div>
 
-        {/* Email + Zip + Submit inline */}
-        <div className="flex gap-2">
+        {/* Email + Zip + Submit */}
+        <div className="flex flex-col gap-2 sm:flex-row">
           <input
             type="email"
             placeholder="Your email"
@@ -154,23 +154,25 @@ export default function WaitlistForm({ variant = "full" }: WaitlistFormProps) {
             required
             className="flex-1 rounded-xl bg-chocolate/20 px-4 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
           />
-          <input
-            type="text"
-            placeholder="Zip"
-            value={zip}
-            onChange={(e) => setZip(e.target.value.replace(/\D/g, "").slice(0, 5))}
-            maxLength={5}
-            inputMode="numeric"
-            required
-            className="w-20 rounded-xl bg-chocolate/20 px-3 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
-          />
-          <button
-            type="submit"
-            disabled={status === "submitting"}
-            className="rounded-xl bg-tangelo px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-tangelo-hover disabled:opacity-60 cursor-pointer whitespace-nowrap"
-          >
-            {status === "submitting" ? "Joining..." : "Join →"}
-          </button>
+          <div className="flex gap-2">
+            <input
+              type="text"
+              placeholder="Zip"
+              value={zip}
+              onChange={(e) => setZip(e.target.value.replace(/\D/g, "").slice(0, 5))}
+              maxLength={5}
+              inputMode="numeric"
+              required
+              className="flex-1 sm:w-20 sm:flex-initial rounded-xl bg-chocolate/20 px-3 py-3 text-linen placeholder:text-linen/40 outline-none focus:ring-2 focus:ring-tangelo"
+            />
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              className="rounded-xl bg-tangelo px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-tangelo-hover disabled:opacity-60 cursor-pointer whitespace-nowrap"
+            >
+              {status === "submitting" ? "Joining..." : "Join →"}
+            </button>
+          </div>
         </div>
 
         {/* Honeypot field — hidden from real users */}

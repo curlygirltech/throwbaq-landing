@@ -1,5 +1,3 @@
-import { SOCIAL_LINKS, FOOTER_LINKS } from "@/lib/constants";
-
 export default function Footer() {
   return (
     <footer className="bg-chocolate text-linen">
@@ -11,28 +9,6 @@ export default function Footer() {
           >
             throw<span className="text-tangelo">baq</span>
           </a>
-
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            {SOCIAL_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-linen/70 transition-colors hover:text-tangelo"
-              >
-                {link.label}
-              </a>
-            ))}
-            <span className="hidden h-4 w-px bg-linen/20 md:block" />
-            {FOOTER_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-linen/70 transition-colors hover:text-tangelo"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
         </div>
 
         <div className="mt-8 border-t border-linen/10 pt-6 text-center text-sm text-linen/50">

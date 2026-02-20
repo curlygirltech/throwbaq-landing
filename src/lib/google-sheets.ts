@@ -4,19 +4,20 @@ function getAuth() {
   return new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      private_key: process.env.GOOGLE_PRIVATE_KEY,
     },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 }
 
-export async function appendToSheet(row: string[]) {
+export async function appendToSheet(row: string[], role: string) {
   const auth = getAuth();
   const sheets = google.sheets({ version: "v4", auth });
+  const sheetName = role === "runner" ? "Runners" : "Shoppers";
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
-    range: "Sheet1!A:E",
+    range: `${sheetName}!A:E`,
     valueInputOption: "USER_ENTERED",
     requestBody: {
       values: [row],

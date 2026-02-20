@@ -53,11 +53,7 @@ export default function ValueProps() {
                 </ul>
                 <a
                   href="#waitlist"
-                  className={`mt-6 inline-block font-semibold transition-colors ${
-                    isDark
-                      ? "text-tangelo hover:text-tangelo-hover"
-                      : "text-tangelo hover:text-tangelo-hover"
-                  }`}
+                  className="mt-6 inline-block font-semibold transition-colors text-tangelo hover:text-tangelo-hover"
                 >
                   {card.cta}
                 </a>

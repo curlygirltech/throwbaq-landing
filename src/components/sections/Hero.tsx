@@ -1,5 +1,8 @@
+"use client";
+
 import Button from "@/components/ui/Button";
 import PhoneMockup from "@/components/ui/PhoneMockup";
+import WaitlistForm from "@/components/ui/WaitlistForm";
 
 export default function Hero() {
   return (
@@ -30,8 +33,11 @@ export default function Hero() {
               office again.
             </p>
 
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-              <Button href="#waitlist">Join the Waitlist &rarr;</Button>
+            <div className="mt-8">
+              <WaitlistForm variant="compact" />
+            </div>
+
+            <div className="mt-4 flex justify-center lg:justify-start">
               <Button variant="outline" href="#how-it-works">
                 See How It Works
               </Button>

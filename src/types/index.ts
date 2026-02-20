@@ -34,10 +34,3 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
-
-export interface WaitlistFormData {
-  email: string;
-  zip: string;
-  city: string;
-  role: Role;
-}

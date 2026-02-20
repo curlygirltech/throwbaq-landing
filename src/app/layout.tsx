@@ -24,11 +24,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Throwbaq — Never Deal With a Return Again",
   description:
-    "Throwbaq connects you with local runners who pick up, pack, and return your online purchases — so you never visit the post office again.",
+    "Throwbaq connects you with local runners who pick up your returns and take them to the post office or straight back to the store — so you never have to.",
   openGraph: {
     title: "Throwbaq — Never Deal With a Return Again",
     description:
-      "Throwbaq connects you with local runners who pick up, pack, and return your online purchases — so you never visit the post office again.",
+      "Throwbaq connects you with local runners who pick up your returns and take them to the post office or straight back to the store — so you never have to.",
     type: "website",
   },
 };

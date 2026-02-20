@@ -28,9 +28,9 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg text-chocolate/70 md:text-xl">
-              Throwbaq connects you with local runners who pick up, pack, and
-              return your online purchases &mdash; so you never visit the post
-              office again.
+              Throwbaq connects you with local runners who pick up your returns
+              and take them to the post office or straight back to the store
+              &mdash; so you never have to.
             </p>
 
             <div className="mt-8">

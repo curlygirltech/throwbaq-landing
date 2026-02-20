@@ -9,7 +9,7 @@ export const STATS: Stat[] = [
   {
     value: "69%",
     label: "of people keep items they don't want because returning is too much hassle",
-    source: "Shorr Packaging, 2025 (n=2,013)",
+    source: "Shorr Packaging, 2025",
   },
   {
     value: "44%",
@@ -21,13 +21,13 @@ export const STATS: Stat[] = [
 export const PAIN_POINTS: PainPoint[] = [
   {
     emoji: "\u{1F4E6}",
-    title: "Find the box, find the tape",
-    description: "Hunting for packaging you threw away three weeks ago.",
+    title: "Box it up yourself",
+    description: "Digging through your closet for a box you threw away weeks ago.",
   },
   {
     emoji: "\u{1F5A8}\u{FE0F}",
-    title: "Print the label",
-    description: "Your printer is out of ink. It always is.",
+    title: "Figure out the label",
+    description: "Print it, tape it, hope you picked the right one.",
   },
   {
     emoji: "\u{1F697}",
@@ -46,13 +46,13 @@ export const STEPS: Step[] = [
     number: 1,
     title: "Request a Return",
     description:
-      "Snap a photo of your item, select the retailer, and choose your return method. 30 seconds, tops.",
+      "Box it up, snap a photo, and tell us where it\u2019s going \u2014 post office or back to the store.",
   },
   {
     number: 2,
     title: "A Runner Claims It",
     description:
-      "A verified local runner picks up your item from your door. No packaging, no labels — we handle everything.",
+      "A verified local runner picks it up from your door and drops it off for you.",
   },
   {
     number: 3,
@@ -68,7 +68,7 @@ export const VALUE_PROPS: ValuePropCard[] = [
     heading: "Your returns, off your plate.",
     features: [
       { text: "Doorstep pickup — skip the post office" },
-      { text: "No boxing, no labeling, no printer needed" },
+      { text: "Skip the trip \u2014 we handle the drop-off" },
       { text: "Real-time tracking with photo proof" },
       { text: "Works with any online retailer" },
       { text: "Same-day pickup available" },
